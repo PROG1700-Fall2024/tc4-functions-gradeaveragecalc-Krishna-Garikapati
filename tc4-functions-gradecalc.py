@@ -4,13 +4,13 @@
 # to calculate a final grade point average for all six courses.
 ############################################
 
-# Student Name: 
+# Student Name: Krishna Priyanka Garikapati
 
 # main() FUNCTION
 
 def new(letterGrade,modifier):
 
-# Determine base numeric value of the grade
+    # Determine base numeric value of the grade
     if letterGrade == "A":
         numericGrade = 4.0
     elif letterGrade == "B":
@@ -35,6 +35,8 @@ def new(letterGrade,modifier):
     elif modifier == "":
             numericGrade
             return numericGrade
+    
+    
 
 def main():
 
@@ -45,22 +47,22 @@ def main():
     print("Calculated grade point value cannot exceed 4.0.\n")
 
      #Gather user inputs
-    PROG1700=input("Please enter a letter grade for PROG1700:")
+    PROG1700=input("Please enter a letter grade for PROG1700:").upper()
     PROG1700mod=input("Please enter a modifier (+, - or nothing) :")
     PROG=new(PROG1700,PROG1700mod)
-    NETW1700=input("Please enter a letter grade for NETW1700:")
+    NETW1700=input("Please enter a letter grade for NETW1700:").upper()
     NETW1700mod=input("Please enter a modifier (+, - or nothing) :")
     NETW=new(NETW1700,NETW1700mod)
-    OSYS1200=input("Please enter a letter grade for OSYS1200:")
+    OSYS1200=input("Please enter a letter grade for OSYS1200:").upper()
     OSYS1200mod=input("Please enter a modifier (+, - or nothing) :")
     OSYS=new(OSYS1200,OSYS1200mod)
-    WEBD1000=input("Please enter a letter grade for WEBD1000:")
+    WEBD1000=input("Please enter a letter grade for WEBD1000:").upper()
     WEBD1000mod=input("Please enter a modifier (+, - or nothing) :")
     WEBD=new(WEBD1000,WEBD1000mod)
-    COMM1700=input("Please enter a letter grade for COMM1700:")
+    COMM1700=input("Please enter a letter grade for COMM1700:").upper()
     COMM1700mod=input("Please enter a modifier (+, - or nothing) :")
     COMM=new(COMM1700,COMM1700mod)
-    DBAS1007=input("Please enter a letter grade for DBAS1007:")
+    DBAS1007=input("Please enter a letter grade for DBAS1007:").upper()
     DBAS1007mod=input("Please enter a modifier (+, - or nothing) :")
     DBAS=new(DBAS1007,DBAS1007mod)
     avg=(PROG+NETW+OSYS+WEBD+COMM+DBAS)/6
