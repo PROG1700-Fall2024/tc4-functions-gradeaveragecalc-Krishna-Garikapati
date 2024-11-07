@@ -36,7 +36,7 @@ def new(letterGrade,modifier):
             numericGrade
             return numericGrade
     
-    
+
 
 def main():
 
@@ -65,7 +65,7 @@ def main():
     DBAS1007=input("Please enter a letter grade for DBAS1007:").upper()
     DBAS1007mod=input("Please enter a modifier (+, - or nothing) :")
     DBAS=new(DBAS1007,DBAS1007mod)
-    avg=(PROG+NETW+OSYS+WEBD+COMM+DBAS)/6
+    avg=float(PROG+NETW+OSYS+WEBD+COMM+DBAS)/6
     
     print("The numeric value for PROG1700 is: ",PROG)
     print("The numeric value for PROG1700 is: ",NETW)
