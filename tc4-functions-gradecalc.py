@@ -7,21 +7,10 @@
 # Student Name: 
 
 # main() FUNCTION
-def main():
 
-    print("Grade Point Calculator\n")
-    print("Valid letter grades that can be entered: A, B, C, D, F.")
-    print("Valid grade modifiers are +, - or nothing.")
-    print("All letter grades except F can include a + or - symbol.")
-    print("Calculated grade point value cannot exceed 4.0.\n")
+def new(letterGrade,modifier):
 
-    numericGrade = 0.0
-
-    #Gather user inputs
-    letterGrade = input("Please enter a letter grade : ").upper()
-    modifier = input("Please enter a modifier (+, - or nothing) : ")
-
-    # Determine base numeric value of the grade
+# Determine base numeric value of the grade
     if letterGrade == "A":
         numericGrade = 4.0
     elif letterGrade == "B":
@@ -43,9 +32,44 @@ def main():
     elif modifier == "-":
         if letterGrade != "F":     # Minus is not valid on F
             numericGrade -= 0.3
+    elif modifier == "":
+            numericGrade
+            return numericGrade
 
-    # Output final message and result, with formatting
-    print("The numeric value is: {0:.1f}".format(numericGrade))
+def main():
 
-#PROGRAM EXECUTION STARTS HERE
+    print("Grade Point Calculator\n")
+    print("Valid letter grades that can be entered: A, B, C, D, F.")
+    print("Valid grade modifiers are +, - or nothing.")
+    print("All letter grades except F can include a + or - symbol.")
+    print("Calculated grade point value cannot exceed 4.0.\n")
+
+     #Gather user inputs
+    PROG1700=input("Please enter a letter grade for PROG1700:")
+    PROG1700mod=input("Please enter a modifier (+, - or nothing) :")
+    PROG=new(PROG1700,PROG1700mod)
+    NETW1700=input("Please enter a letter grade for NETW1700:")
+    NETW1700mod=input("Please enter a modifier (+, - or nothing) :")
+    NETW=new(NETW1700,NETW1700mod)
+    OSYS1200=input("Please enter a letter grade for OSYS1200:")
+    OSYS1200mod=input("Please enter a modifier (+, - or nothing) :")
+    OSYS=new(OSYS1200,OSYS1200mod)
+    WEBD1000=input("Please enter a letter grade for WEBD1000:")
+    WEBD1000mod=input("Please enter a modifier (+, - or nothing) :")
+    WEBD=new(WEBD1000,WEBD1000mod)
+    COMM1700=input("Please enter a letter grade for COMM1700:")
+    COMM1700mod=input("Please enter a modifier (+, - or nothing) :")
+    COMM=new(COMM1700,COMM1700mod)
+    DBAS1007=input("Please enter a letter grade for DBAS1007:")
+    DBAS1007mod=input("Please enter a modifier (+, - or nothing) :")
+    DBAS=new(DBAS1007,DBAS1007mod)
+    avg=(PROG+NETW+OSYS+WEBD+COMM+DBAS)/6
+    
+    print("The numeric value for PROG1700 is: ",PROG)
+    print("The numeric value for PROG1700 is: ",NETW)
+    print("The numeric value for PROG1700 is: ",OSYS) 
+    print("The numeric value for PROG1700 is: ",WEBD)
+    print("The numeric value for PROG1700 is: ",COMM)
+    print("The numeric value for PROG1700 is: ",DBAS)
+    print("Your grade point average for the semester is:",avg)
 main()
